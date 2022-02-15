@@ -22,6 +22,14 @@ public static class Config
                 RedirectUris = new[] { "https://localhost:5002/Callback"},
                 AllowedGrantTypes = GrantTypes.Implicit,
                 AllowedScopes = { "openid", "profile" }
+            },
+
+            new Client
+            {
+                ClientId = "mvc2",
+                RedirectUris = new[] { "https://localhost:5003/signin-oidc"},
+                AllowedGrantTypes = GrantTypes.Implicit,
+                AllowedScopes = { "openid", "profile" }
             }
         };
     }
