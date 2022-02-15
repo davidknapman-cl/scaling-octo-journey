@@ -21,7 +21,7 @@ public static class Config
                 ClientId = "mvc1",
                 RedirectUris = new[] { "https://localhost:5002/Callback"},
                 AllowedGrantTypes = GrantTypes.Implicit,
-                AllowedScopes = { "openid" }
+                AllowedScopes = { "openid", "profile" }
             }
         };
     }

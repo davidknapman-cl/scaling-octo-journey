@@ -21,7 +21,7 @@ namespace Mvc1.Pages
                 "&redirect_uri=https://localhost:5002/Callback" +
                 "&response_type=id_token" +
                 "&response_mode=form_post" +
-                "&scope=openid" +
+                "&scope=openid profile" +
                 "&nonce=random";
 
             return Redirect(url);
