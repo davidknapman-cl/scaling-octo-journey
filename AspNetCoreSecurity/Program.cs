@@ -28,8 +28,18 @@ builder.Services.AddAuthentication("cookie")
 
                 return Task.CompletedTask;
             }
-
         };
+    })
+    .AddCookie("temp")
+    .AddGoogle("Google", options =>
+    {
+        options.ClientId = "999560008429-i4fnstq91ek0sl61pqaics7toir0php5.apps.googleusercontent.com";
+        options.ClientSecret = "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";
+
+        options.CallbackPath = "/signin-google";
+
+        // Will use Default scheme.
+        options.SignInScheme = "temp";
     });
 
 builder.Services.AddAuthorization(options =>
