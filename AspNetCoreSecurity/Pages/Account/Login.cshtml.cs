@@ -34,7 +34,12 @@ public class Login : PageModel
             var identity = new ClaimsIdentity(claims, "pwd", "name", "role");
             var principal = new ClaimsPrincipal(identity);
 
-            await HttpContext.SignInAsync(principal);
+            var props = new AuthenticationProperties
+            {
+                IsPersistent = true,
+            };
+
+            await HttpContext.SignInAsync(principal, props);
 
             return LocalRedirect(ReturnUrl);
         }
