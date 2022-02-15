@@ -24,6 +24,19 @@ public class Login : PageModel
         if (!string.IsNullOrWhiteSpace(UserName) &&
             UserName == Password)
         {
+            var claims = new[]
+            {
+                new Claim("sub", "1234"),
+                new Claim("name", UserName),
+                new Claim("email", $"{UserName}@example.com")
+            };
+
+            var identity = new ClaimsIdentity(claims, "pwd", "name", "role");
+            var principal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync(principal);
+
+            return LocalRedirect(ReturnUrl);
         }
 
         return Page();

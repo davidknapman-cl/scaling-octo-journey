@@ -34,4 +34,5 @@ Console.WriteLine($"Id: {GetId(user)}");
 string GetId(ClaimsPrincipal user)
 {
     return user.Identities.Single().Claims.Single(c => c.Type == "sub").Value;
-}
+}j
+
