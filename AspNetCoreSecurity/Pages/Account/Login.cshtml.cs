@@ -32,8 +32,7 @@ public class Login : PageModel
                 new Claim("name", UserName),
                 new Claim("email", $"{UserName}@example.com"),
                 new Claim("department", "sales"),
-                new Claim("status", "senior")
-
+                //new Claim("status", "senior")
             };
 
             var identity = new ClaimsIdentity(claims, "pwd", "name", "role");
