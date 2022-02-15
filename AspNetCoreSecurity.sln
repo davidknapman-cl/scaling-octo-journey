@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSecurity", "AspNetCoreSecurity\AspNetCoreSecurity.csproj", "{C2DF4D12-0223-486D-8543-2B51A29A9F0A}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSecurity", "AspNetCoreSecurity\AspNetCoreSecurity.csproj", "{C2DF4D12-0223-486D-8543-2B51A29A9F0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsConsole", "ClaimsConsole\ClaimsConsole.csproj", "{ED644604-D24E-4953-BD07-ECBC4EBFFBEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{C2DF4D12-0223-486D-8543-2B51A29A9F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2DF4D12-0223-486D-8543-2B51A29A9F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2DF4D12-0223-486D-8543-2B51A29A9F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED644604-D24E-4953-BD07-ECBC4EBFFBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED644604-D24E-4953-BD07-ECBC4EBFFBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED644604-D24E-4953-BD07-ECBC4EBFFBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED644604-D24E-4953-BD07-ECBC4EBFFBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06AD8733-9CA6-4EDC-A553-C777D07D4E26}
 	EndGlobalSection
 EndGlobal
