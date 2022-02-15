@@ -1,10 +1,12 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNetCoreSecurity.Pages.Account;
 
+[AllowAnonymous]
 public class Login : PageModel
 {
     [BindProperty]
@@ -28,7 +30,10 @@ public class Login : PageModel
             {
                 new Claim("sub", "1234"),
                 new Claim("name", UserName),
-                new Claim("email", $"{UserName}@example.com")
+                new Claim("email", $"{UserName}@example.com"),
+                new Claim("department", "sales"),
+                new Claim("status", "senior")
+
             };
 
             var identity = new ClaimsIdentity(claims, "pwd", "name", "role");

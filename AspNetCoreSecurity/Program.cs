@@ -31,6 +31,16 @@ builder.Services.AddAuthentication("cookie")
         };
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ManageCustomer", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("department", "sales");
+        policy.RequireClaim("status", "senior");
+    });
+});
+
 builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformer>();
 
 var app = builder.Build();
@@ -41,6 +51,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapRazorPages()
+    .RequireAuthorization();
 
 app.Run();
