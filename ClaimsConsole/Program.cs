@@ -8,7 +8,8 @@ var claims = new[]
     new Claim ("name", "Anders Abel"),
     new Claim ("given_name", "Anders"),
     new Claim ("family_name", "Abel"),
-    new Claim ("role", "identity geek")
+    new Claim ("role", "identity geek"),
+    new Claim ("role", "teacher")
     };
 
 var ci = new ClaimsIdentity(claims, "known facts", "name", "role");
@@ -28,4 +29,9 @@ foreach (var claim in user.Claims)
 Console.WriteLine();
 Console.WriteLine($"Are you a geek? {user.IsInRole("identity geek")}");
 
-Console.WriteLine($"Id: {user.FindFirst("sub")!.Value}");
+Console.WriteLine($"Id: {GetId(user)}");
+
+string GetId(ClaimsPrincipal user)
+{
+    return user.Identities.Single().Claims.Single(c => c.Type == "sub").Value;
+}
