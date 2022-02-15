@@ -42,6 +42,10 @@ builder.Services.AddAuthentication("cookie")
         options.SignInScheme = "temp";
     });
 
+builder.Services.AddIdentityServer()
+    .AddInMemoryIdentityResources(Config.GetIdentityResources())
+    .AddInMemoryClients(Config.GetClients());
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("ManageCustomer", policy =>
@@ -68,7 +72,8 @@ var app = builder.Build();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseAuthentication();
+// app.UseAuthentication(); Called by UseIdentityServer
+app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapRazorPages()
