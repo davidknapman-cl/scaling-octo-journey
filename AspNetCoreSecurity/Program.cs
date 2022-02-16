@@ -98,12 +98,16 @@ builder.Services.AddAuthentication(opt =>
 
         opt.IdentityProviders.Add(idp);
     });
-    
 
-    builder.Services.AddIdentityServer()
+
+    builder.Services.AddIdentityServer(opt =>
+    {
+        //opt.EmitStaticAudienceClaim = true;
+    })
     .AddInMemoryIdentityResources(Config.GetIdentityResources())
     .AddInMemoryClients(Config.GetClients())
-    .AddTestUsers(TestUsers.Users);
+    .AddTestUsers(TestUsers.Users)
+    .AddInMemoryApiScopes(Config.ApiScopes);
 
             builder.Services.AddAuthorization(options =>
             {

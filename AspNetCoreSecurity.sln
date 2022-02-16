@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc1", "Mvc1\Mvc1.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc2", "Mvc2\Mvc2.csproj", "{BA1FD430-4B1B-4BCE-A530-84A6199AC878}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{EE85C1A4-6CE2-4D1E-8C6D-2C6C95E39E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientCredentialsClient", "ClientCredentialsClient\ClientCredentialsClient.csproj", "{61D686C1-DDE3-4B87-952C-DBE120D23B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{BA1FD430-4B1B-4BCE-A530-84A6199AC878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA1FD430-4B1B-4BCE-A530-84A6199AC878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA1FD430-4B1B-4BCE-A530-84A6199AC878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE85C1A4-6CE2-4D1E-8C6D-2C6C95E39E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE85C1A4-6CE2-4D1E-8C6D-2C6C95E39E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE85C1A4-6CE2-4D1E-8C6D-2C6C95E39E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE85C1A4-6CE2-4D1E-8C6D-2C6C95E39E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D686C1-DDE3-4B87-952C-DBE120D23B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D686C1-DDE3-4B87-952C-DBE120D23B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D686C1-DDE3-4B87-952C-DBE120D23B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D686C1-DDE3-4B87-952C-DBE120D23B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

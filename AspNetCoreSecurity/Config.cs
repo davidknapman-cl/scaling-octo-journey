@@ -36,7 +36,21 @@ public static class Config
                 PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc" },
 
                 FrontChannelLogoutUri = "https://localhost:5003/signout-oidc"
+            },
+
+            new Client
+            {
+                ClientId = "Console",
+                AllowedGrantTypes = GrantTypes.ClientCredentials,
+                ClientSecrets = { new Secret("secret".Sha256())},
+                AllowedScopes = { "api1", "api2"}
             }
         };
     }
+
+    public static IEnumerable<ApiScope> ApiScopes = new[]
+    {
+        new ApiScope("api1"),
+        new ApiScope("api2"),
+    };
 }
