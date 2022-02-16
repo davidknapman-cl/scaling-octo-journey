@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClaimsConsole", "ClaimsCons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc1", "Mvc1\Mvc1.csproj", "{D212D26F-09AD-4B6D-9828-E598D0B5F76F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc2", "Mvc2\Mvc2.csproj", "{BA1FD430-4B1B-4BCE-A530-84A6199AC878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc2", "Mvc2\Mvc2.csproj", "{BA1FD430-4B1B-4BCE-A530-84A6199AC878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

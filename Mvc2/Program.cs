@@ -15,6 +15,8 @@ builder.Services.AddAuthentication(options =>
         options.ClientId = "mvc2";
 
         options.MapInboundClaims = false;
+
+        options.SaveTokens = true;
     });
 
 var app = builder.Build();
