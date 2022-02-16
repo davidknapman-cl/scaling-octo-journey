@@ -44,7 +44,8 @@ builder.Services.AddAuthentication("cookie")
 
 builder.Services.AddIdentityServer()
     .AddInMemoryIdentityResources(Config.GetIdentityResources())
-    .AddInMemoryClients(Config.GetClients());
+    .AddInMemoryClients(Config.GetClients())
+    .AddTestUsers(TestUsers.Users);
 
 builder.Services.AddAuthorization(options =>
 {
