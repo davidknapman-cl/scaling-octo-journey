@@ -29,9 +29,10 @@ public static class Config
             new Client
             {
                 ClientId = "mvc2",
+                ClientSecrets = { new Secret("secret".Sha256())},
                 RedirectUris = new[] { "https://localhost:5003/signin-oidc"},
-                AllowedGrantTypes = GrantTypes.Implicit,
-                AllowedScopes = { "openid", "profile" },
+                AllowedGrantTypes = GrantTypes.Code,
+                AllowedScopes = { "openid", "profile", "api1", "api2" },
 
                 PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc" },
 

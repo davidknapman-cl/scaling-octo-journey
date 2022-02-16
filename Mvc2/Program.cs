@@ -13,6 +13,13 @@ builder.Services.AddAuthentication(options =>
     {
         options.Authority = "https://localhost:5001";
         options.ClientId = "mvc2";
+        options.ClientSecret = "secret";
+
+        options.ResponseType = "code";
+        options.ResponseMode = "query";
+
+        options.Scope.Add("api1");
+        options.Scope.Add("api2");
 
         options.MapInboundClaims = false;
 
