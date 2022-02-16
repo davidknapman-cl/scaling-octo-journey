@@ -11,33 +11,11 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddAuthentication(opt =>
 {
-    opt.DefaultScheme = "cookie";
-    opt.DefaultSignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+    // These default values are set internally by IdentityServer.
+    //opt.DefaultScheme = IdentityServerConstants.DefaultCookieAuthenticationScheme;
+    //opt.DefaultSignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+    //opt.DefaultSignOutScheme = IdentityServerConstants.DefaultCookieAuthenticationScheme;
 })
-    .AddCookie("cookie", options =>
-    {
-        options.ExpireTimeSpan = TimeSpan.FromHours(1);
-        options.Cookie.Name = "demo-cookie";
-
-        options.LoginPath = "/Account/Login";
-        options.AccessDeniedPath = "/Account/AccessDenied";
-
-        options.Events = new Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents
-        {
-            OnSigningOut = e =>
-            {
-                // Release reserved items.
-                return Task.CompletedTask;
-            },
-            OnValidatePrincipal = e =>
-            {
-                // User still active?
-                // Refresh roles/claims?
-
-                return Task.CompletedTask;
-            }
-        };
-    })
     .AddGoogle("Google", options =>
     {
         options.ClientId = "999560008429-i4fnstq91ek0sl61pqaics7toir0php5.apps.googleusercontent.com";

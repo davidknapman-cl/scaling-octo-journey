@@ -33,10 +33,12 @@ public static class Config
                 RedirectUris = new[] { "https://localhost:5003/signin-oidc"},
                 AllowedGrantTypes = GrantTypes.Code,
                 AllowedScopes = { "openid", "profile", "api1", "api2" },
+                AllowOfflineAccess = true,
 
                 PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc" },
 
                 FrontChannelLogoutUri = "https://localhost:5003/signout-oidc"
+
             },
 
             new Client
